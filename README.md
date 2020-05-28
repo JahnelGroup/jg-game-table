@@ -1,3 +1,12 @@
+# jg-game-table
+The purpose of this project is to provide a hosted, publicly accessible server to which JG Code Wars members may add their own turn-based games.
+
+## To start the server, run
+$ `node -r esm src/server.js`
+## To start the client, run
+$ `yarn start`
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
