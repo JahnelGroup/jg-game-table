@@ -5,11 +5,21 @@ import { Local, SocketIO } from 'boardgame.io/multiplayer'
 import { TicTacToe } from './tic-tac-toe/tic-tac-toe-game'
 import { TicTacToeBoard } from './tic-tac-toe/TicTacToeBoard'
 
+import { ConnectFour } from './connect-four/connect-four-game'
+import { ConnectFourBoard } from './connect-four/ConnectFourBoard'
+
 
 const TicTacToeClient = Client({ 
   game: TicTacToe,
   board: TicTacToeBoard,
   // multiplayer: Local()
+  multiplayer: SocketIO({ server: 'localhost:8000' })
+});
+
+const ConnectFourClient = Client({ 
+  game: ConnectFour,
+  board: ConnectFourBoard,
+  //multiplayer: Local()
   multiplayer: SocketIO({ server: 'localhost:8000' })
 });
 
@@ -32,7 +42,7 @@ class App extends React.Component {
     }
     return (
       <div>
-        <TicTacToeClient playerID={this.state.playerID}
+        <ConnectFourClient playerID={this.state.playerID}
         // gameID
         />
       </div>
