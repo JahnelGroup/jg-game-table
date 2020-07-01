@@ -14,10 +14,13 @@ function clickColumn(G, ctx, column) {
   for (let i = HEIGHT - 1; i >= 0; i--) {
     if (G.cells[column][i] == null) {
       G.cells[column][i] = ctx.currentPlayer;
-      G.lastMove = column;
+      //G.lastMove = column;
+      G.lastMove = "Player " + ctx.currentPlayer + " to column " + column;
       return;
     }
   }
+  //console.log("Player " + ctx.currentPlayer + ", invalid move!");
+  G.lastMove = "Player " + ctx.currentPlayer + ", invalid move!";
   return INVALID_MOVE;
 }
 
