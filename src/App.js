@@ -8,6 +8,8 @@ import { TicTacToeBoard } from './tic-tac-toe/TicTacToeBoard'
 import { ConnectFour } from './connect-four/connect-four-game'
 import { ConnectFourBoard } from './connect-four/ConnectFourBoard'
 
+import { Schnapsen } from './schnapsen/schnapsen-game'
+import { SchnapsenBoard } from './schnapsen/SchnapsenBoard'
 
 const TicTacToeClient = Client({ 
   game: TicTacToe,
@@ -20,6 +22,12 @@ const ConnectFourClient = Client({
   game: ConnectFour,
   board: ConnectFourBoard,
   //multiplayer: Local()
+  multiplayer: SocketIO({ server: 'localhost:8000' })
+});
+
+const SchnapsenClient = Client({ 
+  game: Schnapsen
+  board: SchnapsenBoard,
   multiplayer: SocketIO({ server: 'localhost:8000' })
 });
 
