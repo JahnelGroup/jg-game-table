@@ -15,12 +15,12 @@ function clickColumn(G, ctx, column) {
     if (G.cells[column][i] == null) {
       G.cells[column][i] = ctx.currentPlayer;
       //G.lastMove = column;
-      G.lastMove = "Player " + ctx.currentPlayer + " to column " + column;
+      G.lastMove = column;
       return;
     }
   }
   //console.log("Player " + ctx.currentPlayer + ", invalid move!");
-  G.lastMove = "Player " + ctx.currentPlayer + ", invalid move!";
+  //G.lastMove = "Player " + ctx.currentPlayer + ", invalid move!";
   return INVALID_MOVE;
 }
 
