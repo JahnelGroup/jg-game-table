@@ -75,3 +75,20 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### Add game to lobbyWrapper component
+
+To add a game to the lobby;
+1. In app.lobby.js, import the desired game & board i.e:
+    import { newGame} from './newGame/newGameLogic'
+    import { newGameBoard } from './newGame/newGameBoard'
+2. add and entry to components variable i.e:
+	[
+     ...,
+     {
+        board: newGameBoard,
+        game: { ...newGame },
+      }
+    ]
+3. import and add the game to the server variable in server.js if not defined 
