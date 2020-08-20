@@ -1,0 +1,136 @@
+#board {
+    --cardWidth: 5em;
+    --cardHeight: 7em;
+}
+.card {
+    top: 0;
+    left: 0;
+    display: inline-block;
+    background-color: white;
+    border: 1px solid darkgray;
+    border-radius: 10%;
+    width: var(--cardWidth);
+    height: var(--cardHeight);
+    color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 1s;
+    position: absolute;
+    transform-origin: center;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+.cardback {
+    z-index: 1;
+    background-color: blue;
+    border: 2px solid white;
+    position: relative;
+}
+
+#table {
+    display: flex;
+    justify-content: space-between;
+}
+
+#trick {
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.disabled {
+    filter: brightness(0.75);
+}
+
+.AH {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/HEART-1.svg')
+}
+.TH {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/HEART-10.svg')
+}
+.KH {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/HEART-13-KING.svg')
+}
+.QH {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/HEART-12-QUEEN.svg')
+}
+.JH {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/HEART-11-JACK.svg')
+}
+
+.AS {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/SPADE-1.svg')
+}
+.TS {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/SPADE-10.svg')
+}
+.KS {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/SPADE-13-KING.svg')
+}
+.QS {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/SPADE-12-QUEEN.svg')
+}
+.JS {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/SPADE-11-JACK.svg')
+}
+
+
+.AC {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/CLUB-1.svg')
+}
+.TC {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/CLUB-10.svg')
+}
+.KC {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/CLUB-13-KING.svg')
+}
+.QC {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/CLUB-12-QUEEN.svg')
+}
+.JC {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/CLUB-11-JACK.svg')
+}
+
+
+.AD {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/DIAMOND-1.svg')
+}
+.TD {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/DIAMOND-10.svg')
+}
+.KD {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/DIAMOND-13-KING.svg')
+}
+.QD {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/DIAMOND-12-QUEEN.svg')
+}
+.JD {
+    background-image: url('./Vector\ Cards\ \(Version\ 3.2\)/FACES\ \(BORDERED\)/STANDARD\ BORDERED/Single\ Cards\ \(One\ Per\ FIle\)/DIAMOND-11-JACK.svg')
+}
+
+
+.hand {
+    top: calc(100% - var(--cardHeight));
+    left: 50%;
+}
+
+.south {
+    opacity: 0;
+    scale: 50%;
+    top: calc(100% - var(--cardHeight));
+    left: 75%;
+}
+
+.north {
+    top: 0;
+    left: 50%;
+    opacity: 0;
+    scale: 50%;
+}
+
+.trick-pile {
+    top: 50%;
+    left: 50%;
+}
+
